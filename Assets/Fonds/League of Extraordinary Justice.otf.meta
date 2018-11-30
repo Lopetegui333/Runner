@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 974dc039f3bb3294a8ac0302760a1c84
+timeCreated: 1543602291
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: League of Extraordinary Justice
+  fontNames:
+  - League of Extraordinary Justice
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

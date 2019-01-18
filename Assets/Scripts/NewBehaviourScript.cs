@@ -14,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour {
     void Start () {
 
         float speed = 100 ;
-        myVector = mid.transform.position;
+        myVector = mid.transform.position;  
     }
 	
 	// Update is called once per frame

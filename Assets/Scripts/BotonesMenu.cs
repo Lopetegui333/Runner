@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class BotonesMenu : MonoBehaviour {
 
     public Button BtStart, BtOptions, BtExit;
@@ -12,6 +12,7 @@ public class BotonesMenu : MonoBehaviour {
         BtStart.onClick.AddListener(play);
         BtExit.onClick.AddListener(exit);
         BtOptions.onClick.AddListener(options);
+        
     }
 	
 	// Update is called once per frame
@@ -26,7 +27,7 @@ public class BotonesMenu : MonoBehaviour {
 
     void play()
     {
-
+        SceneManager.LoadScene("Play");
     }
 
     void options()

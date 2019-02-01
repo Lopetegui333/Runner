@@ -18,19 +18,23 @@ public class Controlador : ControladorBasico {
     public Transform puntoanclaje1;
     public List<GameObject> plataformas = new List<GameObject>();
     int tamañolista;
+    int Cargar;
     
 
 
     // Use this for initialization
     void Start () {
+   
        
         base.Start();
         tamañolista = plataformas.Count;
         //Debug.Log(tamañolista);
         var PInicio = Instantiate(Plataforma1, puntoinicio.transform.position, puntoinicio.transform.rotation);
         var anclaje = PInicio.gameObject.transform.Find("anclaje1");
-        //Debug.Log((Random.Range(0, tamañolista)));
-        Instantiate(Plataforma2, anclaje.transform.position, anclaje.transform.rotation);
+        GameObject Control = GameObject.Find("Carga");
+        CargaPlataforma CargaPlataforma = Control.GetComponent<CargaPlataforma>();
+        int cargar = CargaPlataforma.plataformasiguiente;
+        
     }
 	
 	// Update is called once per frame

@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class CargaPlataforma : MonoBehaviour {
     int tamañolista2;
-	// Use this for initialization
-	void Start () {
+    public int plataformasiguiente;
+    public GameObject Plataforma1;
+    public Transform puntoinicio;
+    List<GameObject> lista;
+    // Use this for initialization
+    void Start () {
         GameObject Mapa = GameObject.Find("ControladorMapa");
         Controlador Controlador = Mapa.GetComponent<Controlador>();
-        var tamañolista = Controlador.plataformas;
-        tamañolista2 = tamañolista.Count;
+        lista = Controlador.plataformas;
+        tamañolista2 = lista.Count;
+        var PInicio = Instantiate(Plataforma1, puntoinicio.transform.position, puntoinicio.transform.rotation);
+        var anclaje = PInicio.gameObject.transform.Find("anclaje1");
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-    void OnTriggerEnter(Collider Personaje)
+    void OnTriggerExit(Collider Personaje)
     {
-        Debug.Log(Random.Range(0, tamañolista2));
+        var PInicio = Instantiate(Plataforma1, puntoinicio.transform.position, puntoinicio.transform.rotation);
+        var anclaje = PInicio.gameObject.transform.Find("anclaje1");
+
+        plataformasiguiente = Random.Range(0, tamañolista2);
+        Debug.Log(lista[plataformasiguiente]);
+       Instantiate(lista[plataformasiguiente], anclaje.transform.position, anclaje.transform.rotation);
     }
 }

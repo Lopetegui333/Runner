@@ -28,4 +28,8 @@ public class CargaPlataforma : MonoBehaviour
         Debug.Log(puntoAnclaje);
         script_mapa.elementoActual = Instantiate(elementoAleatorio, puntoAnclaje.position, puntoAnclaje.rotation);
     }
+    void OnTriggerExit(Collider other)
+    {
+        Destroy(gameObject);
+    }
 }

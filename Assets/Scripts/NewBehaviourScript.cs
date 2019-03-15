@@ -19,8 +19,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        myVector = mid.transform.position;
 
-        
 
         if (Input.GetKeyDown(KeyCode.A) && (transform.position.x == mid.transform.position.x))
         {
